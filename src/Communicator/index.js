@@ -397,7 +397,7 @@ class Communicator extends EventEmitter {
 			status: {
 				status: status
 			},
-			to: new StanzaUI.JID(to)
+			to: new StanzaIO.JID(to)
 		} : null, to);
 
 	}
