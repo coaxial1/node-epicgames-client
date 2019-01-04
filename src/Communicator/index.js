@@ -389,6 +389,18 @@ class Communicator extends EventEmitter {
 		} : null);
 
 	}
+	
+	updatePersonalStatus (status, to) {
+
+		to = to + '@prod.ol.epicgames.com';
+		this.stream.sendPresence(status ? {
+			status: {
+				status: status
+			},
+			to: new StanzaUI.JID(to)
+		} : null, to);
+
+	}
 
 }
 
