@@ -176,7 +176,7 @@ class Communicator extends EventEmitter {
   }
 
   listenFriendsList() {
-
+/*
     this.stream.on('iq', (stanza) => {
       
       if (stanza.roster && stanza.type === 'result') {
@@ -189,7 +189,7 @@ class Communicator extends EventEmitter {
 
       }
 
-    });
+    }); */
 
   }
 
