@@ -616,6 +616,24 @@ class Communicator extends EventEmitter {
     return this.stream.sendPresence(status);
   }
 
+ updatePersonalStatus(status, to) {
+    
+    if (!status) return this.stream.sendPresence(null);
+    
+    if (typeof status === 'string') {
+      to = `${to}@${this.host}`;
+      return this.stream.sendPresence({
+        status: {
+          status,
+        },
+        to: new JID(to)
+      });
+
+    }
+
+    return this.stream.sendPresence(status);
+  }
+
 }
 
 module.exports = Communicator;
