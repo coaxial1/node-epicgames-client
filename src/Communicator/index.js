@@ -616,7 +616,7 @@ class Communicator extends EventEmitter {
     return this.stream.sendPresence(status);
   }
 
- updatePersonalStatus(status, to) {
+  updatePersonalStatus(status, to) {
     
     if (!status) return this.stream.sendPresence(null);
     
@@ -626,7 +626,7 @@ class Communicator extends EventEmitter {
         status: {
           status,
         },
-        to: new JID(to)
+        to: new JID(to),
       });
 
     }
